@@ -1,0 +1,31 @@
+<!-- layout.html -->
+<html>
+    <head>
+        <title>NY Times Best Sellers</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Results</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{range .Results.Books}}
+                <tr>
+		    <td>{{.Title}}</td>
+		    <td>{{.Author}}</td>
+		    <td>{{.Rank}}</td>
+                    <td>{{.RankLastWeek}}</td>
+		    <td>{{.Publisher}}</td>
+		    <td>{{.AmazonProductURL}}</td>
+		    <td>{{.BookReviewLink}}</td>
+		    <td>{{.FirstChapterLink}}</td>
+		    <td>{{.ArticleChapterLink}}</td>
+		    <td>{{.BuyLinks}}</td>
+                </tr>
+            {{end}}
+            </tbody>
+        </table>
+    </body>
+</html>
